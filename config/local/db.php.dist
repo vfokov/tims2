@@ -1,0 +1,11 @@
+<?php
+/**
+ * Local config for db connection.
+ */
+return [
+    'class'    => 'yii\db\Connection',
+    'dsn'      => 'mysql:host=localhost;dbname=web_its',
+    'username' => 'its',
+    'password' => 'its',
+    'charset'  => 'utf8',
+];

@@ -1,0 +1,87 @@
+{
+    "name": "tims2",
+    "description": "Tims 2 Project",
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-codeception": "*",
+        "yiisoft/yii2-composer": "*",
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-faker": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-imagine": "*",
+        "yiisoft/yii2-jui": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "bower-asset/jquery": "2.1.4",
+        "bower-asset/jquery-ui": "1.11.4",
+        "bower-asset/notifyjs": "0.3.2",
+        "2amigos/yii2-grid-view-library": "0.1.1",
+        "2amigos/yii2-editable-widget": "0.1.4",
+        "2amigos/yii2-dosamigos-asset-bundle": "0.1.0",
+        "2amigos/yii2-gallery-widget": "1.0.1",
+        "2amigos/yii2-date-picker-widget": "1.0.5",
+        "2amigos/yii2-date-time-picker-widget" : "~1.0",
+        "vakorovin/yii2-datetimepicker": "dev-master",
+        "2amigos/yii2-file-upload-widget": "1.0.2",
+        "imagine/imagine": "v0.5.0",
+        "perminder-klair/yii2-videojs": "dev-master#9da26d7",
+        "kartik-v/bootstrap-checkbox-x": "v1.5.4",
+        "kartik-v/bootstrap-popover-x": "v1.4.1",
+        "kartik-v/mpdf": "*",
+        "kartik-v/yii2-checkbox-x": "v1.0.2",
+        "kartik-v/yii2-date-range": "v1.6.3",
+        "kartik-v/yii2-grid": "3.0.4",
+        "kartik-v/yii2-krajee-base": "v1.7.7",
+        "kartik-v/yii2-mpdf": "*",
+        "kartik-v/yii2-popover-x": "v1.3.1",
+        "kartik-v/yii2-widget-activeform": "v1.4.4",
+        "kartik-v/yii2-widget-datepicker": "*",
+        "kartik-v/yii2-widget-select2": "*",
+        "kartik-v/yii2-widget-typeahead": "v1.0.1",
+        "kartik-v/yii2-icons": "*",
+        "branchonline/yii2-lightbox": "*",
+        "kfosoft/php-abstract-enum": "1.0",
+        "kfosoft/php-int-enum-x64": "1.0",
+        "johnitvn/yii2-rbac-plus": "*",
+        "pheme/yii2-settings": "*",
+        "2amigos/yii2-google-maps-library" : "*",
+        "yiicod/yii2-listener": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-codeception": "*",
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-faker": "*"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        },
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
